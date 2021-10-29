@@ -1,0 +1,41 @@
+<div class="container ">
+  <section class="row ">
+    <div class="col-10 col-lg-6 mx-auto border shadow-lg mt-5">
+      <h1 class="text-primary text-center fw-bold mt-4 mb-2" > Budget Calculator</h1>
+      <section class="row">
+        <form [formGroup]="myform" (ngSubmit)="onSubmit()" class="row justify-content-center">
+          <mat-form-field class="col-11 col-lg-9 " appearance="outline">
+            <mat-label>Monthly Income</mat-label>
+            <input matInput type="number" placeholder="Enter your income" formControlName="income">
+          </mat-form-field>
+          <mat-form-field class="col-11 col-lg-9 " appearance="outline">
+            <mat-label> Rent paid</mat-label>
+            <input matInput type="number" placeholder="Rent" formControlName="rent">
+          </mat-form-field>
+          <mat-form-field class="col-11 col-lg-9 " appearance="outline">
+            <mat-label>Food </mat-label>
+            <input matInput type="number" placeholder="Amt spent for food" formControlName="food">
+          </mat-form-field>
+          <mat-form-field class="col-11 col-lg-9 " appearance="outline">
+            <mat-label>Utilities </mat-label>
+            <input matInput type="number" placeholder="Utility" formControlName="utility">
+          </mat-form-field>
+          <mat-form-field class="col-11 col-lg-9 " appearance="outline">
+            <mat-label>Insurance </mat-label>
+            <input matInput type="number" placeholder="Ins Amt" formControlName="insurance">
+          </mat-form-field>
+          <mat-form-field class="col-11 col-lg-9 " appearance="outline">
+            <mat-label>Other(money paid out for other)</mat-label>
+            <input matInput type="number" placeholder="Other" formControlName="other">
+          </mat-form-field>
+          <div class="row justify-content-center p-3 m-3"> <button class="btn btn-primary col-6 col-lg-3"
+              [disabled]=!myform.valid type="submit">
+              Submit
+            </button></div>
+        </form>
+      </section>
+
+    </div>
+  </section>
+
+</div>
